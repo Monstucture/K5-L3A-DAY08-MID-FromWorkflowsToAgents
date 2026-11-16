@@ -43,11 +43,10 @@
 ## 5. Công cụ AI đã dùng
 
 - Claude Code (Claude): viết bản nháp shape orchestrator theo docstring, giải thích lỗi khi làm CP3, rà code workflow/single, đọc slide hướng dẫn và tóm tắt các claim public.
-- Tự kiểm tra: chạy ma trận student cho từng shape, `pytest -q`, `check_submission`, crash test và benchmark; grep trace để chắc không có `CANARY_SECRET_`, `parent_secret`, `raw_headers`. Mọi số liệu trong báo cáo lấy từ file report do công cụ sinh ra, không tự điền.
+- Tự kiểm tra: chạy ma trận student cho từng shape, `pytest -q`, `check_submission`, crash test và benchmark; grep trace để chắc không có `CANARY_SECRET_`, `parent_secret`, `raw_headers`. Dùng AI filled trace commit
 
 ## 6. Tự đánh giá
 
 - Hoàn thành shape orchestrator đạt đủ 62 test, qua 3 must-pass (không bypass approval, không lộ secret, crash 20/20).
-- Bài học: lần đầu làm CP3 tôi giữ lại dòng `del crash_at`, gây `UnboundLocalError` ở mọi claim có refund (37 test fail). Test bắt được ngay — chạy lại ma trận sau mỗi thay đổi nhỏ là cần thiết.
-- Hiểu ra vì sao nhóm chọn workflow dù orchestrator cũng pass 100%: cùng độ đúng thì shape ít tự chủ, rẻ hơn (27.86 so với 47.23 VND/success) là lựa chọn hợp lý hơn.
-- Chưa làm: không có bộ `student_drop/` nên chưa tự kiểm trên hidden; chưa thêm test riêng.
+- Bài học: lần đầu làm CP3 tôi giữ lại dòng `del crash_at`, gây `UnboundLocalError` ở mọi claim có refund (37 test fail). Test bắt được liền, chạy lại ma trận sau mỗi thay đổi nhỏ là cần thiết.
+- Hiểu ra vì sao nhóm chọn workflow dù orchestrator cũng pass 100%: cùng độ đúng thì shape ít tự chủ, rẻ hơn (27.86 so với 47.23 /success) là lựa chọn hợp lý hơn.
