@@ -4,6 +4,7 @@
 - MSSV: 2A202603633
 - Email: 26ai.minhnd4@vinuni.edu.vn
 - GitHub: https://github.com/MinhDucDepZaiJ
+- Nhóm: MID — Lớp L3A
 
 ## 2. Phần việc phụ trách
 - Triển khai Single ReAct Agent tại src/lab8/shapes/single.py.
