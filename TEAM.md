@@ -11,7 +11,7 @@
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
-|   1 |        |      |       |        |         |
+|   1 |       Quách Ngọc Phúc |      2A202603665|       quachphucbk@gmail.com|        https://github.com/quachphucbk|         |
 |   2 |        |      |       |        |         |
 
 Gợi ý chia vai:
