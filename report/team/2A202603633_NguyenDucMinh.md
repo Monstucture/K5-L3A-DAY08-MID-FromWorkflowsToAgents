@@ -61,8 +61,7 @@ Benchmark dùng **MockLLM** và dữ liệu mô phỏng; các chỉ số này ch
 - **Fixture dữ liệu:** `src/tests/conftest.py`
 - **Benchmark:** `reports/benchmark_single.json`
 - **Crash test:** `reports/crash.json`
-- **Commit GitHub:** [Bổ sung hash commit thực tế]
-- **Pull Request:** [Bổ sung URL nếu có]
+- **Commit GitHub:** 5016a693e409866fc796e3c5cbedd455cc05bb2e
 
 Lệnh chạy kiểm thử cá nhân (từ thư mục `src`):
 
