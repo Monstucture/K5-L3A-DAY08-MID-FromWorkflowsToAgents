@@ -38,3 +38,17 @@ Công cụ, dùng vào việc gì, và bạn đã tự kiểm tra kết quả th
 ## 6. Tự đánh giá
 
 ...
+
+## 2A202603674_Trần Thanh Long
+
+### Phần việc phụ trách
+
+- 
+
+### Đóng góp cụ thể
+
+- làm code `shape/orchestrator.py`
+
+### Bằng chứng
+
+- `shape/orchestrator.py` 
