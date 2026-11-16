@@ -27,13 +27,10 @@ Gợi ý chia vai:
 
 | Người | Vai | Commit | Test đã thêm hoặc sửa |
 | --- | --- | --- | --- |
-<<<<<<< Updated upstream
 | Quách Ngọc Phúc | | | Chưa có test riêng trong lịch sử đã kiểm tra; thành viên cần bổ sung |
 | Ngô Văn Tuân | Ledger/crash, evaluation và tổng hợp báo cáo | `de10b6a`, `b3f45ba` | `src/tests/test_refund_crash_recovery.py` (9 trường hợp); `src/tests/test_swarm_peer_ablation.py` (5 trường hợp) |
-=======
 | Quách Ngọc Phúc | | | `src/tests/test_workflow_approval_cap.py`; `src/tests/test_workflow_revoked_approval.py` (2 test case: approval cap/retry và approval thu hồi/audit) |
 | Ngô Văn Tuân | | | `src/tests/test_refund_crash_recovery.py` (9 trường hợp); `src/tests/test_swarm_peer_ablation.py` (5 trường hợp) |
->>>>>>> Stashed changes
 | Trần Thanh Long | Orchestrator + handoff; crash test, benchmark | `f7e31af`, `06fa360`, `a36161d` | `src/tests/test_orchestrator_handoff.py` (2 test: handoff chỉ tool đọc + trace không lộ secret/ticket/PII; C-002 denied ở seed 55) |
 | Nguyễn Đức Minh | Single ReAct Agent | `c8e90c0` | src/tests/test_single_contribution.py |
 
