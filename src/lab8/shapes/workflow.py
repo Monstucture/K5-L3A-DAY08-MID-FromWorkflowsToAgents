@@ -48,8 +48,6 @@ def run_claim(
     store_path: str,
     crash_at: str | None = None,
 ) -> RunResult:
-    # TODO CP2 (student): thay stub này bằng shape workflow theo các bước ở docstring đầu file.
-    # TODO CP3 (student): truyền crash_at vào durability.issue_refund, không bắt InjectedCrash.
     conn = connect(store_path)
     budget = Budget()
     trace = Trace(make_run_id("workflow", claim_id, seed))
@@ -168,5 +166,3 @@ def run_claim(
 
     finally:
         conn.close()
-    del store_path, crash_at
-    return not_implemented("workflow", claim_id, seed)

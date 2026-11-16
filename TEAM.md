@@ -14,7 +14,7 @@
 |   1 |       Quách Ngọc Phúc |      2A202603665|       quachphucbk@gmail.com|        https://github.com/quachphucbk|         |
 |   2 | Ngô Văn Tuân | 2A202603630 | 26ai.tuannv3@vinuni.edu.vn | https://github.com/Monstucture/K5-L3A-DAY08-MID-FromWorkflowsToAgents |  |
 |   3 |    Trần Thanh Long    |   2A202603674   |    26ai.longtt2@vinuni.edu.vn   |    https://github.com/Monstucture/K5-L3A-DAY08-MID-FromWorkflowsToAgents    |         |
-|   4 |    Nguyễn Đức Minh    |   2A202603633   |    26ai.minhnd4@vinuni.edu.vn   |        |         |
+|   4 |    Nguyễn Đức Minh    |   2A202603633   |    26ai.minhnd4@vinuni.edu.vn   |    https://github.com/MinhDucDepZaiJ    |         |
 
 Gợi ý chia vai:
 
