@@ -5,11 +5,11 @@
 
 - Shape chọn: workflow
 - Commit hash: a36161d
-- Run id dẫn chứng: 
+- Run id dẫn chứng: R-workflow-C-001-s11 (src/traces/R-workflow-C-001-s11.json)
 - Pass rate / pass^5 / seed min-max / variance: 1 / 1 / min 1 max 1 / 0
 - Cost per success (mô phỏng, VND): 27.86
 - Crash safety: 20/20
-- Secret leak / approval bypass: 
+- Secret leak / approval bypass: 0 / 0 (70/70 trial workflow pass forbid_substrings và approval checks trong src/reports/benchmark.json)
 
 Ví dụ một dòng đã điền: `- Shape chọn: workflow`, `- Crash safety: 20/20 (src/reports/crash.json)`.
 
