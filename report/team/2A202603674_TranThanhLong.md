@@ -25,12 +25,15 @@
 - `06fa360` — CP3: truyền `crash_at` vào `issue_refund`, không bắt `InjectedCrash`.
 - `faa3e99`, `7721b6f` — chạy `lab8.crash_test` (20/20) và `lab8.benchmark` 4 shape × 5 seed trên bộ public.
 - `a36161d` — sửa nhỏ sau khi rà code nhóm: xóa code chết còn sót từ stub trong `workflow.py`; `single.py` trả `failed` cho claim không tồn tại (thống nhất với 3 shape còn lại) và ghi `reason` khi quote = 0.
+- `b604bbc` — chạy lại benchmark 4 shape sau khi `reports/benchmark.json` bị ghi đè chỉ còn swarm (check_submission yêu cầu đủ 4 shape).
+- `6abdf8b` — điền dòng `Run id dẫn chứng` (`R-workflow-C-001-s11`) và `Secret leak / approval bypass` (0 / 0, đã grep 70 trace workflow không có secret/PII) trong `decision_adr.md`; `check_submission` ra 0 FAIL, 0 WARN.
 - Quyết định kỹ thuật: để `facts` rỗng trong handoff vì investigator tự đọc order row — không có gì từ parent context cần chuyển qua ranh giới, nên không có gì để lộ.
 - Test: không thêm test mới; dùng ma trận student T01–T14 có sẵn để kiểm.
 
 ## 4. Bằng chứng
 
-- Commit: `f7e31af`, `06fa360`, `faa3e99`, `7721b6f`, `a36161d`.
+- Commit: `f7e31af`, `06fa360`, `faa3e99`, `7721b6f`, `a36161d`, `b604bbc`, `6abdf8b`.
+- `python -m lab8.check_submission` trên `main` (sau `6abdf8b`): 0 FAIL, 0 WARN.
 - Test: `python -m pytest -q -m student -o addopts= -k orchestrator` → 62 passed (gồm `test_t11_retry_keeps_one_refund[orchestrator]`, `test_t12_crash_before_checkpoint_does_not_double_pay[orchestrator]`). Toàn bộ ma trận student: 248 passed; `python -m pytest -q`: 54 passed.
 - `python -m lab8.check_submission`: `shape orchestrator: format đúng, 12/12 claim public pass ở seed 11`.
 - Run id: `R-orchestrator-C-001-s11` (trace trong `src/traces/`).
