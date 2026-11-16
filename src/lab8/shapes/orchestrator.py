@@ -39,8 +39,6 @@ def run_claim(
     store_path: str,
     crash_at: str | None = None,
 ) -> RunResult:
-    # TODO CP3 (student): truyền crash_at vào durability.issue_refund, không bắt InjectedCrash.
-    del crash_at
     conn = connect(store_path)
     try:
         budget = Budget()
@@ -86,7 +84,7 @@ def run_claim(
             return done("denied", reason=quote.get("reason"))
 
         # Full quote; the host subtracts earlier refunds on this order.
-        outcome = issue_refund(conn, claim_id, proposal)
+        outcome = issue_refund(conn, claim_id, proposal, crash_at=crash_at)
         if not outcome["ok"]:
             return done("failed" if outcome["conflict"] else "denied", proposal, outcome["reason"])
         return done("resolved", proposal)
