@@ -29,7 +29,7 @@ def run_claim(claim_id: str, *, seed: int, store_path: str,
                           trace=trace, error_reason=error)
 
         if not claim.get("found"):
-            return done("escalated", error="unknown_claim")
+            return done("failed", error="unknown_claim")
         if not claim.get("order_id"):
             return done("needs_info", error="missing_order_id")
 
@@ -73,7 +73,7 @@ def run_claim(claim_id: str, *, seed: int, store_path: str,
         amount = int((state["quote"] or {}).get("amount_vnd", 0))
         trace.add("quote", {"amount_vnd": amount})
         if amount <= 0:
-            return done("denied", amount)
+            return done("denied", amount, (state["quote"] or {}).get("reason"))
 
         # The host owns authorization, per-order cap, idempotency and the write.
         outcome = issue_refund(conn, claim_id, amount, crash_at=crash_at)
