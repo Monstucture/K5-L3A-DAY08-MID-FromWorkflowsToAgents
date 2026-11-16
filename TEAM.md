@@ -28,7 +28,7 @@ Gợi ý chia vai:
 | Người | Vai | Commit | Test đã thêm hoặc sửa |
 | --- | --- | --- | --- |
 | Quách Ngọc Phúc | | | Chưa có test riêng trong lịch sử đã kiểm tra; thành viên cần bổ sung |
-| Ngô Văn Tuân | | | `src/tests/test_refund_crash_recovery.py` (9 trường hợp); `src/tests/test_swarm_peer_ablation.py` (5 trường hợp) |
+| Ngô Văn Tuân | Ledger/crash, evaluation và tổng hợp báo cáo | `de10b6a`, `b3f45ba` | `src/tests/test_refund_crash_recovery.py` (9 trường hợp); `src/tests/test_swarm_peer_ablation.py` (5 trường hợp) |
 | Trần Thanh Long | Orchestrator + handoff; crash test, benchmark | `f7e31af`, `06fa360`, `a36161d` | `src/tests/test_orchestrator_handoff.py` (2 test: handoff chỉ tool đọc + trace không lộ secret/ticket/PII; C-002 denied ở seed 55) |
 | Nguyễn Đức Minh | | | Chưa có test riêng trong lịch sử đã kiểm tra; thành viên cần bổ sung |
 
