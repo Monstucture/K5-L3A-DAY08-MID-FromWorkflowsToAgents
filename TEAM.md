@@ -12,7 +12,7 @@
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
 |   1 |    Trần Thanh Long    |   2A202603674   |    26ai.longtt2@vinuni.edu.vn   |    https://github.com/Monstucture/K5-L3A-DAY08-MID-FromWorkflowsToAgents    |         |
-|   2 |        |      |       |        |         |
+|   2 |    Nguyễn Đức Minh    |   2A202603633   |    26ai.minhnd4@vinuni.edu.vn   |        |         |
 
 Gợi ý chia vai:
 
