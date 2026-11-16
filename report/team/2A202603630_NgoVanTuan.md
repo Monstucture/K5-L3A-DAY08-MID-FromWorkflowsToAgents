@@ -22,6 +22,8 @@
 - Kiểm tra trạng thái đã lưu ngay sau crash bằng connection mới; sau đó retry với seed `11`, `22`, `55` trên cùng database.
 - Sau mỗi retry, kiểm tra tổng hoàn theo đơn vẫn bằng 150.000 VND, lịch sử có đúng hai dòng (refund cũ và refund mới), claim C-014 có đúng một refund và một audit `refund_committed`; checkpoint lưu 120.000 VND.
 - Giữ nguyên code shape, host, policy, config và data; chỉ thêm file test.
+- Đóng góp tiếp theo ở commit `b3f45ba`: thêm variant research `swarm_no_peer`, 5 test kiểm tra ablation và report JSON do benchmark sinh ra. Variant tắt riêng peer acknowledgement; reference chính thức giữ nguyên.
+- Tổng hợp bảng đóng góp, báo cáo nhóm, ADR chọn workflow và research card R2 từ số liệu public thực tế; ghi rõ phần còn thiếu của các thành viên.
 
 ## 4. Bằng chứng
 
@@ -41,6 +43,8 @@ python -m pytest -q -p no:cacheprovider -o addopts=
 
 Kết quả: `311 passed`, gồm toàn bộ host và student, có chín trường hợp mới.
 
+Sau khi bổ sung ablation ở commit `b3f45ba`, chạy lại cùng lệnh toàn bộ đạt `316 passed`. Benchmark chính thức và crash suite được chạy lại, khớp JSON đã có; crash safety `20/20`. Ablation có 140 trial trong [research_peer_ablation.json](../../src/reports/research_peer_ablation.json): pass rate hai nhánh cùng 69/70, cost/success giảm 49,566957 → 48,691594 VND mô phỏng khi tắt peer.
+
 Test gắn marker `student` vì gọi trực tiếp ba shape do nhóm triển khai. Dùng `-p no:cacheprovider` để tránh warning quyền ghi pytest cache trên máy Windows; tùy chọn này không thay đổi assertion của test.
 
 ## 5. Công cụ AI đã dùng
@@ -51,6 +55,6 @@ Test gắn marker `student` vì gọi trực tiếp ba shape do nhóm triển kh
 
 ## 6. Tự đánh giá
 
-- Bằng chứng hoàn thành phần kỹ thuật: một commit thêm test, chín trường hợp mới pass và toàn bộ 311 test pass tại commit kỹ thuật nêu trên.
+- Bằng chứng hoàn thành phần kỹ thuật: hai commit `de10b6a`, `b3f45ba`, tổng cộng 14 trường hợp test thêm và toàn bộ 316 test pass tại commit `b3f45ba`.
 - Phạm vi kiểm chứng: dữ liệu public, ba shape A/B/C, ba điểm crash định sẵn và ba seed retry. Kết quả này chưa chứng minh tính đúng trên toàn bộ hidden dataset hoặc khi nhiều process ghi đồng thời.
 - Test mô phỏng crash bằng `InjectedCrash`, không mô phỏng mất điện hay lỗi hệ điều hành. MockLLM không đại diện cho model production; không suy ra latency thực tế từ kết quả này.

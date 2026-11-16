@@ -4,7 +4,7 @@
 
 - Tên nhóm: MID
 - Lớp: L3A
-- Repo nhóm: `K5-L3A-DAY08-TenNhom-FromWorkflowsToAgents` (xem [SUBMISSION.md](SUBMISSION.md))
+- Repo nhóm: `K5-L3A-DAY08-MID-FromWorkflowsToAgents` (xem [SUBMISSION.md](SUBMISSION.md))
 - URL repo, nhánh nộp, commit chốt: https://github.com/Monstucture/K5-L3A-DAY08-MID-FromWorkflowsToAgents
 
 ## Thành viên
@@ -12,7 +12,7 @@
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
 |   1 |       Quách Ngọc Phúc |      2A202603665|       quachphucbk@gmail.com|        https://github.com/quachphucbk|         |
-|   2 | Ngô Văn Tuân | 2A202603630 | 26ai.tuannv3@vinuni.edu.vn | https://github.com/Monstucture/K5-L3A-DAY08-MID-FromWorkflowsToAgents |  |
+|   2 | Ngô Văn Tuân | 2A202603630 | 26ai.tuannv3@vinuni.edu.vn | https://github.com/Monstucture/K5-L3A-DAY08-MID-FromWorkflowsToAgents | Ledger/crash + evaluation/report |
 |   3 |    Trần Thanh Long    |   2A202603674   |    26ai.longtt2@vinuni.edu.vn   |    https://github.com/Monstucture/K5-L3A-DAY08-MID-FromWorkflowsToAgents    |         |
 |   4 |    Nguyễn Đức Minh    |   2A202603633   |    26ai.minhnd4@vinuni.edu.vn   |        |         |
 
@@ -27,7 +27,10 @@ Gợi ý chia vai:
 
 | Người | Vai | Commit | Test đã thêm hoặc sửa |
 | --- | --- | --- | --- |
-| | | | |
+| Quách Ngọc Phúc | Shape A: workflow | `9bdf78d` | Chưa có test riêng trong lịch sử đã kiểm tra; thành viên cần bổ sung |
+| Ngô Văn Tuân | Ledger/crash, evaluation và tổng hợp báo cáo | `de10b6a`, `b3f45ba` | `src/tests/test_refund_crash_recovery.py` (9 trường hợp); `src/tests/test_swarm_peer_ablation.py` (5 trường hợp) |
+| Trần Thanh Long | Shape C: orchestrator; chạy benchmark | `f7e31af`, `06fa360`, `7721b6f` | Chưa có test riêng trong lịch sử đã kiểm tra; thành viên cần bổ sung |
+| Nguyễn Đức Minh | Shape B: single | `cdc9a37` | Chưa có test riêng trong lịch sử đã kiểm tra; thành viên cần bổ sung |
 
 ## Cá nhân
 
