@@ -67,9 +67,12 @@ def integrity_check(pr: dict, base: dict, spec: dict, base_spec: dict | None = N
     if pr.get("evaluator_failures"):
         problems.append("evaluator_failures non-empty")
 
-    metric_ids = {m["id"] for m in spec.get("metrics", [])}
+    row_metric_ids = {
+        m["id"] for m in spec.get("metrics", [])
+        if m.get("grader") != "lab8.metrics.summarize"
+    }
     for row in rows:
-        for metric_id in sorted(metric_ids):
+        for metric_id in sorted(row_metric_ids):
             if row.get(metric_id) is None:
                 problems.append(f"row {row.get('item_id')}@{row.get('seed')} missing {metric_id}")
 

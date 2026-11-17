@@ -53,6 +53,22 @@ def test_integrity_flags_nan_and_dropped_rows():
     assert gate.integrity_check(dropped, base, SPEC)
 
 
+def test_integrity_checks_row_metrics_not_summary_metrics():
+    from lab9 import gate
+
+    report = _report(copy.deepcopy(ROWS), {"pass_5": 1.0, "cost_per_success": 10.0})
+    spec = {"metrics": [
+        {"id": "pass_rate", "grader": "lab9.graders.TrialPass"},
+        {"id": "pass_5", "grader": "lab8.metrics.summarize"},
+        {"id": "cost_per_success", "grader": "lab8.metrics.summarize"},
+    ]}
+    assert gate.integrity_check(report, report, spec) == []
+
+    del report["rows"][0]["pass_rate"]
+    problems = gate.integrity_check(report, report, spec)
+    assert "row E-000@1 missing pass_rate" in problems
+
+
 def test_integrity_flags_loosened_spec():
     from lab9 import gate
 
